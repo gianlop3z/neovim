@@ -4,6 +4,7 @@ return {
 		opts = {
 			formatters_by_ft = {
 				["python"] = { "black", "isort" },
+				["dart"] = { "dart_format" },
 			},
 		},
 	},

@@ -2,6 +2,9 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		opts = {
+			servers = {
+				dartls = {},
+			},
 			setup = {
 				ruff_lsp = function()
 					return true
