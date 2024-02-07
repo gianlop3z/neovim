@@ -14,15 +14,6 @@ return {
 				-- lua
 				"stylua",
 				"lua-language-server",
-				-- python
-				"ruff",
-				"pyright",
-				-- typescript / javascript
-				"typescript-language-server",
-				"tailwindcss-language-server",
-				"prettier",
-				-- docker
-				"dockerfile-language-server",
 			})
 		end,
 	},
