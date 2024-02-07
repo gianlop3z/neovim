@@ -5,11 +5,6 @@ return {
 			servers = {
 				dartls = {},
 			},
-			setup = {
-				ruff_lsp = function()
-					return true
-				end,
-			},
 		},
 	},
 	{
@@ -20,9 +15,8 @@ return {
 				"stylua",
 				"lua-language-server",
 				-- python
+				"ruff",
 				"pyright",
-				"black",
-				"isort",
 				-- typescript / javascript
 				"typescript-language-server",
 				"tailwindcss-language-server",
