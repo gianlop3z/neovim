@@ -21,4 +21,37 @@ return {
 			},
 		},
 	},
+	{
+		"nvimdev/dashboard-nvim",
+		opts = function(_, opts)
+			opts.config.header = vim.split(string.rep("\n", 8), "\n")
+
+			opts.config.center = {
+				{
+					action = "Telescope find_files",
+					desc = " Find file",
+					icon = " ",
+					key = "f",
+				},
+				{
+					action = "Telescope oldfiles",
+					desc = " Recent files",
+					icon = " ",
+					key = "r",
+				},
+				{
+					action = "Telescope live_grep",
+					desc = " Find text",
+					icon = " ",
+					key = "g",
+				},
+				{
+					action = "qa",
+					desc = " Quit",
+					icon = " ",
+					key = "q",
+				},
+			}
+		end,
+	},
 }
