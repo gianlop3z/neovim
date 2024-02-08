@@ -14,6 +14,9 @@ return {
 				-- lua
 				"stylua",
 				"lua-language-server",
+				-- python
+				"ruff",
+				"pyright",
 			})
 		end,
 	},
