@@ -28,6 +28,12 @@ return {
 
 			opts.config.center = {
 				{
+					action = "Telescope file_browser",
+					desc = " Browse files",
+					icon = "󱞊 ",
+					key = "b",
+				},
+				{
 					action = "Telescope find_files",
 					desc = " Find file",
 					icon = " ",
