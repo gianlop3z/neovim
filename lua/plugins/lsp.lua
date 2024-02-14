@@ -4,6 +4,7 @@ return {
 		opts = {
 			servers = {
 				dartls = {},
+				intelephense = {},
 			},
 		},
 	},
@@ -17,6 +18,9 @@ return {
 				-- python
 				"ruff",
 				"pyright",
+				-- php
+				"intelephense",
+				"php-cs-fixer",
 			})
 		end,
 	},
