@@ -17,7 +17,7 @@ end
 discipline.ninja()
 
 -- Dismiss notifications from `nvim-notify`
-keymap.set("n", "<leader>nd", function()
+keymap.set("n", "nd", function()
 	require("notify").dismiss({ silent = true, pending = true })
 end)
 
@@ -38,11 +38,8 @@ end)
 -- Enter on command-line mode
 keymap.set("n", ";", ":", { nowait = true })
 
--- Delete a word backwards
-keymap.set("n", "dw", "vb_d")
-
 -- Select the current file content
-keymap.set("n", "sa", "gg<S-v>G")
+keymap.set("n", "sa", "ggVG")
 
 -- Split window
 keymap.set("n", "ss", "<Cmd>split<CR>", opts)
@@ -56,3 +53,6 @@ keymap.set("n", "sl", "<C-w>l", opts)
 
 -- Remove search highlights
 keymap.set("n", "ch", "<Cmd>noh<CR>", opts)
+
+-- Show line diagnostics
+keymap.set("n", "sd", "<Cmd>lua vim.diagnostic.open_float()<CR>")

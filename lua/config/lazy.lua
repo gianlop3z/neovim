@@ -14,9 +14,6 @@ require("lazy").setup({
 			import = "lazyvim.plugins",
 			opts = {
 				colorscheme = "tokyonight",
-				defaults = {
-					keymaps = false,
-				},
 			},
 		},
 		-- import any extras modules here
