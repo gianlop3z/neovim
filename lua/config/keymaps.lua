@@ -38,9 +38,6 @@ end)
 -- Enter on command-line mode
 keymap.set("n", ";", ":", { nowait = true })
 
--- Select the current file content
-keymap.set("n", "sa", "ggVG")
-
 -- Split window
 keymap.set("n", "ss", "<Cmd>split<CR>", opts)
 keymap.set("n", "sv", "<Cmd>vsplit<CR>", opts)
@@ -55,4 +52,7 @@ keymap.set("n", "sl", "<C-w>l", opts)
 keymap.set("n", "ch", "<Cmd>noh<CR>", opts)
 
 -- Show line diagnostics
-keymap.set("n", "sd", "<Cmd>lua vim.diagnostic.open_float()<CR>")
+keymap.set("n", "sd", "<Cmd>lua vim.diagnostic.open_float()<CR>", opts)
+
+-- Replace in word
+keymap.set("n", "riw", "viwp", { nowait = true })
