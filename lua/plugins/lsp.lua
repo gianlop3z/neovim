@@ -3,8 +3,7 @@ return {
 		"neovim/nvim-lspconfig",
 		opts = {
 			servers = {
-				dartls = {},
-				intelephense = {},
+				phpactor = {},
 			},
 		},
 	},
@@ -19,7 +18,7 @@ return {
 				"ruff",
 				"pyright",
 				-- php
-				"intelephense",
+				"phpactor",
 				"php-cs-fixer",
 			})
 		end,
