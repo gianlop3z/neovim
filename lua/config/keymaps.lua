@@ -55,4 +55,4 @@ keymap.set("n", "ch", "<Cmd>noh<CR>", opts)
 keymap.set("n", "sd", "<Cmd>lua vim.diagnostic.open_float()<CR>", opts)
 
 -- Replace in word
-keymap.set("n", "riw", "viwp", { nowait = true })
+keymap.set("n", "riw", "viwP", { nowait = true })
