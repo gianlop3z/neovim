@@ -10,6 +10,7 @@ return {
 			},
 			formatters_by_ft = {
 				["python"] = { "black", "isort" },
+				["go"] = { "goimports", "gofumpt" },
 				["php"] = { "php_cs_fixer" },
 			},
 		},
