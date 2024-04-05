@@ -92,4 +92,14 @@ return {
 			telescope.load_extension("fzf")
 		end,
 	},
+	{
+		"folke/flash.nvim",
+		opts = {
+			modes = {
+				char = {
+					enabled = false,
+				},
+			},
+		},
+	},
 }

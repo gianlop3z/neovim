@@ -56,3 +56,6 @@ keymap.set("n", "sd", "<Cmd>lua vim.diagnostic.open_float()<CR>", opts)
 
 -- Replace in word
 keymap.set("n", "riw", "viwP", { nowait = true })
+
+-- Clone current line/selection down
+keymap.set("n", "cd", "yyPj", { nowait = true })
