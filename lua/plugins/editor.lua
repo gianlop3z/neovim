@@ -8,59 +8,38 @@ return {
 			return {
 				{
 					"<leader>tg",
-					function()
-						local builtin = require("telescope.builtin")
-						builtin.live_grep()
-					end,
+					"<Cmd>Telescope live_grep<CR>",
 					desc = "Open `telescope` live grep picker",
 				},
 				{
 					"<leader>tf",
-					function()
-						local builtin = require("telescope.builtin")
-						builtin.find_files({ hidden = true })
-					end,
+					"<Cmd>Telescope find_files hidden=true<CR>",
 					desc = "Open `telescope` file finder picker",
 				},
 				{
 					"<leader>to",
-					function()
-						local builtin = require("telescope.builtin")
-						builtin.buffers()
-					end,
+					"<Cmd>Telescope buffers<CR>",
 					desc = "Open `telescope` open buffers picker",
 				},
 				{
 					"<leader>tb",
-					function()
-						local telescope = require("telescope")
-						telescope.extensions.file_browser.file_browser()
-					end,
-					desc = "",
+					"<Cmd>Telescope file_browser<CR>",
+					desc = "Open `telescope` file browser picker",
 				},
 				{
 					"<leader>tr",
-					function()
-						local builtin = require("telescope.builtin")
-						builtin.resume()
-					end,
+					"<Cmd>Telescope resume<CR>",
 					desc = "Open `telescope` resume picker",
 				},
 				{
 					"<leader>td",
-					function()
-						local builtin = require("telescope.builtin")
-						builtin.diagnostics()
-					end,
+					"<Cmd>Telescope diagnostics<CR>",
 					desc = "Open `telescope` diagnostics picker",
 				},
 				{
-					"<leader>tt",
-					function()
-						local builtin = require("telescope.builtin")
-						builtin.treesitter()
-					end,
-					desc = "Open `telescope` treesitter picker",
+					"<leader>tm",
+					"<Cmd>Telescope marks<CR>",
+					desc = "Open `telescope` marks picker",
 				},
 			}
 		end,

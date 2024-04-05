@@ -52,6 +52,12 @@ return {
 					key = "g",
 				},
 				{
+					action = "Telescope marks",
+					desc = " Find mark",
+					icon = " ",
+					key = "m",
+				},
+				{
 					action = "qa",
 					desc = " Quit",
 					icon = " ",
