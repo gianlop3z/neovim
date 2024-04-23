@@ -24,7 +24,7 @@ return {
 	{
 		"nvimdev/dashboard-nvim",
 		opts = function(_, opts)
-			opts.config.header = vim.split(string.rep("\n", 8), "\n")
+			opts.config.header = vim.split(string.rep("\n", 6), "\n")
 
 			opts.config.center = {
 				{
