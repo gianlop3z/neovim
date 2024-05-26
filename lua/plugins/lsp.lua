@@ -5,6 +5,9 @@ return {
 			servers = {
 				phpactor = {},
 			},
+			inlay_hints = {
+				enabled = false,
+			},
 		},
 	},
 	{

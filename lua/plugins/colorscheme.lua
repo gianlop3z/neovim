@@ -1,10 +1,8 @@
 return {
-	"okaihe/okai",
+	"scottmckendry/cyberdream.nvim",
 	lazy = false,
 	priority = 1000,
 	config = function()
-		require("okai").setup({})
-		vim.cmd([[colorscheme okai]])
-		vim.cmd([[highlight Cursor guibg=White]])
+		vim.cmd([[colorscheme cyberdream]])
 	end,
 }
