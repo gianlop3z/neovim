@@ -12,10 +12,6 @@ return {
 		enabled = false,
 	},
 	{
-		"folke/trouble.nvim",
-		enabled = false,
-	},
-	{
 		"linux-cultist/venv-selector.nvim",
 		enabled = false,
 	},
