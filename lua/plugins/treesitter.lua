@@ -9,8 +9,6 @@ return {
 				"typescript",
 				"tsx",
 				"html",
-				"css",
-				"php",
 			},
 		},
 	},
