@@ -5,7 +5,8 @@
 local discipline = require("custom.discipline")
 
 local keymap = vim.keymap
-local opts = { noremap = true, silent = true }
+
+local options = { noremap = true, silent = true }
 
 local function use_key_warning(key)
 	vim.notify("You have to use the `" .. key .. "` key on normal mode", vim.log.levels.WARN, {
@@ -39,23 +40,26 @@ end)
 keymap.set("n", ";", ":", { nowait = true })
 
 -- Split window
-keymap.set("n", "ss", "<Cmd>split<CR>", opts)
-keymap.set("n", "sv", "<Cmd>vsplit<CR>", opts)
+keymap.set("n", "ss", "<Cmd>split<CR>", options)
+keymap.set("n", "sv", "<Cmd>vsplit<CR>", options)
 
 -- Move the cursor between split windows
-keymap.set("n", "sh", "<C-w>h", opts)
-keymap.set("n", "sj", "<C-w>j", opts)
-keymap.set("n", "sk", "<C-w>k", opts)
-keymap.set("n", "sl", "<C-w>l", opts)
+keymap.set("n", "sh", "<C-w>h", options)
+keymap.set("n", "sj", "<C-w>j", options)
+keymap.set("n", "sk", "<C-w>k", options)
+keymap.set("n", "sl", "<C-w>l", options)
 
 -- Remove search highlights
-keymap.set("n", "ch", "<Cmd>noh<CR>", opts)
+keymap.set("n", "ch", "<Cmd>noh<CR>", options)
 
 -- Show line diagnostics
-keymap.set("n", "sd", "<Cmd>lua vim.diagnostic.open_float()<CR>", opts)
+keymap.set("n", "sd", "<Cmd>lua vim.diagnostic.open_float()<CR>", options)
 
 -- Replace in word
-keymap.set("n", "riw", "viwP", { nowait = true })
+keymap.set("n", "riw", "viwP", options)
 
 -- Clone current line/selection down
-keymap.set("n", "cd", "yyPj", { nowait = true })
+keymap.set("n", "cd", "yyPj", options)
+
+-- Close all but current buffer
+keymap.set("n", "<leader>bdo", "<Cmd>1,.-bdelete<CR>", { desc = "Delete all but current buffer" })
