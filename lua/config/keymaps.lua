@@ -62,4 +62,4 @@ keymap.set("n", "riw", "viwP", options)
 keymap.set("n", "cd", "yyPj", options)
 
 -- Close all but current buffer
-keymap.set("n", "<leader>bdo", "<Cmd>1,.-bdelete<CR>", { desc = "Delete all but current buffer" })
+keymap.set("n", "<leader>bdo", "<Cmd>%bd|edit#|bd#<CR>", { desc = "Delete all but current buffer" })
