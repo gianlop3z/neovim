@@ -17,11 +17,6 @@ end
 -- Discipline setup
 discipline.ninja()
 
--- Dismiss notifications from `nvim-notify`
-keymap.set("n", "nd", function()
-	require("notify").dismiss({ silent = true, pending = true })
-end)
-
 -- Disable arrow navigation
 keymap.set({ "n", "i", "v" }, "<Left>", function()
 	use_key_warning("h")
