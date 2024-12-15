@@ -8,22 +8,53 @@ return {
 				opts = {
 					ensure_installed = {
 						-- lua
-						"lua-language-server",
+						"lua-language-server", -- [lsp]
+						"stylua", -- [formatter]
+						-- python
+						"ruff", -- [formatter, linter]
+						"pyright", -- [lsp]
 					},
 				},
 			},
 			{
 				"saghen/blink.cmp",
-				lazy = false,
 				version = "v0.*",
 				opts = {
 					keymap = { preset = "super-tab" },
+				},
+				dependencies = {
+					{ "rafamadriz/friendly-snippets" },
 				},
 			},
 		},
 		opts = {
 			servers = {
-				lua_ls = {},
+				-- lua
+				lua_ls = {
+					settings = {
+						Lua = {
+							diagnostics = {
+								globals = { "vim" },
+							},
+						},
+					},
+				},
+				-- python
+				ruff = {},
+				pyright = {
+					settings = {
+						pyright = {
+							-- using `ruff` for organize imports
+							disableOrganizeImports = true,
+						},
+						python = {
+							analysis = {
+								-- ignore all files for analysis to use `ruff` for linting
+								ignore = { "*" },
+							},
+						},
+					},
+				},
 			},
 		},
 		config = function(_, opts)

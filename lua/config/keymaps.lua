@@ -24,6 +24,17 @@ map("n", "ch", "<Cmd>noh<CR>", { noremap = true, nowait = true })
 -- [`gianllopez/neovim.conf`]: clone current line down
 map("n", "cd", "yyPj", { noremap = true, nowait = true })
 
+-- [`neovim/nvim-lspconfig`]: organize current buffer imports
+map("n", "<leader>oi", function()
+	vim.lsp.buf.code_action({
+		apply = true,
+		context = {
+			only = { "source.organizeImports" },
+			diagnostics = {},
+		},
+	})
+end, { noremap = true, nowait = true })
+
 -- [`akinsho/bufferline`]: move to previous buffer
 map("n", "H", "<Cmd>BufferLineCyclePrev<CR>", { noremap = true, nowait = true })
 -- [`akinsho/bufferline`]: move to next buffer
