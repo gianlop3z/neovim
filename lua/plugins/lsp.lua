@@ -8,11 +8,11 @@ return {
 				opts = {
 					ensure_installed = {
 						-- lua
-						"lua-language-server", -- [lsp]
-						"stylua", -- [formatter]
+						"lua-language-server",
 						-- python
-						"ruff", -- [formatter, linter]
-						"pyright", -- [lsp]
+						"pyright",
+						-- typescript
+						"vtsls",
 					},
 				},
 			},

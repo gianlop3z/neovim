@@ -8,14 +8,24 @@ return {
 					ensure_installed = {
 						-- lua
 						"stylua",
+						-- python
+						"ruff",
+						-- typescript
+						"prettierd",
 					},
 				},
 			},
 		},
 		opts = {
 			format_on_save = true,
+			formatters = {
+				prettier = { command = "node_modules/prettier/bin/prettier.cjs" },
+			},
 			formatters_by_ft = {
 				lua = { "stylua" },
+				python = { "ruff_format" },
+				typescript = { "prettier" },
+				typescriptreact = { "prettier" },
 			},
 		},
 	},
