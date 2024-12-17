@@ -8,7 +8,8 @@ return {
 		opts = {
 			filters = {
 				dotfiles = true,
-				exclude = { ".env", ".env.*" },
+				custom = { "^%.venv%..*" },
+				exclude = { "%.env$", "%.env%..*" },
 			},
 		},
 	},
@@ -26,5 +27,14 @@ return {
 				char = { enabled = false },
 			},
 		},
+	},
+	{
+		"smjonas/inc-rename.nvim",
+		opts = {},
+	},
+	{
+		"folke/todo-comments.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		opts = {},
 	},
 }

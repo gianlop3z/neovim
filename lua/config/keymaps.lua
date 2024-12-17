@@ -1,5 +1,14 @@
 local map = vim.keymap.set
 
+-- [`gianllopez/neovim.conf`]: `discipline` setup
+require("custom.discipline").ninja()
+
+-- [`gianllopez/neovim.conf`]: disable arrow navigation
+map({ "n", "i", "v" }, "<Left>", "<Nop>")
+map({ "n", "i", "v" }, "<Down>", "<Nop>")
+map({ "n", "i", "v" }, "<Right>", "<Nop>")
+map({ "n", "i", "v" }, "<Up>", "<Nop>")
+
 -- [`lazy.nvim`]: open `Lazy` tool
 map("n", "<leader>l", "<Cmd>Lazy<CR>", { noremap = true, nowait = true })
 
@@ -34,6 +43,10 @@ map("n", "<leader>oi", function()
 		},
 	})
 end, { noremap = true, nowait = true })
+-- [`neovim/nvim-lspconfig`]: go to definition
+map("n", "gd", vim.lsp.buf.definition, { noremap = true, nowait = true })
+-- [`neovim/nvim-lspconfig`]: execute code actions
+map("n", "<leader>ca", vim.lsp.buf.code_action, { noremap = true, nowait = true })
 
 -- [`akinsho/bufferline`]: move to previous buffer
 map("n", "H", "<Cmd>BufferLineCyclePrev<CR>", { noremap = true, nowait = true })
@@ -53,8 +66,12 @@ map("n", "<leader>fe", "<Cmd>NvimTreeToggle<CR>", { noremap = true, nowait = tru
 -- [`nvim-tree/nvim-tree.lua`]: toggle the file explorer
 map("n", "fe", "<Cmd>NvimTreeFocus<CR>", { noremap = true, nowait = true })
 
--- [`ibhagwan/fzf-lua`]: find files on the current directory
+-- [`ibhagwan/fzf-lua`]: find files
 map("n", "<leader>ff", "<Cmd>FzfLua files<CR>", { noremap = true, nowait = true })
+-- [`ibhagwan/fzf-lua`]: execute a live grep
+map("n", "<leader>fg", "<Cmd>FzfLua live_grep_native<CR>", { noremap = true, nowait = true })
+-- [`ibhagwan/fzf-lua`]: resume last command
+map("n", "<leader>fr", "<Cmd>FzfLua resume<CR>", { noremap = true, nowait = true })
 
 -- [`folke/flash.nvim`]: Flash in current buffer
 map("n", "s", function()
@@ -64,3 +81,8 @@ end, { noremap = true })
 map("n", "S", function()
 	require("flash").treesitter()
 end, { noremap = true })
+
+-- -- [`smjonas/inc-rename.nvim`]: execute the renaming feature
+map("n", "<leader>cr", function()
+	return ":IncRename " .. vim.fn.expand("<cword>")
+end, { noremap = true, expr = true })
