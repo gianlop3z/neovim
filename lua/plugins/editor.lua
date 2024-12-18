@@ -20,6 +20,21 @@ return {
 		},
 	},
 	{
+		"stevearc/dressing.nvim",
+		opts = {
+			select = {
+				backend = { "fzf_lua" },
+				fzf_lua = {
+					winopts = {
+						width = 0.5,
+						height = 0.5,
+						preview = { hidden = "hidden" },
+					},
+				},
+			},
+		},
+	},
+	{
 		"folke/flash.nvim",
 		event = "VeryLazy",
 		opts = {

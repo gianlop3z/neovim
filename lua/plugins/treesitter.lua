@@ -12,6 +12,7 @@ return {
 				"lua",
 				"typescript",
 				"tsx",
+				"dockerfile",
 			},
 		},
 		config = function(_, opts)

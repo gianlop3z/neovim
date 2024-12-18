@@ -1,19 +1,22 @@
--- leader definition
+-- [`gianllopez/neovim.conf`]: leader definition
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- tabs and spaces
+-- [`gianllopez/neovim.conf`]: tabs and spaces
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 
--- clipboard
+-- [`gianllopez/neovim.conf`]: clipboard
 vim.opt.clipboard = "unnamedplus"
 
--- relative number
+-- [`gianllopez/neovim.conf`]: relative number
 vim.opt.relativenumber = true
 
--- wrap behavior
+-- [`gianllopez/neovim.conf`]: wrap behavior
 vim.opt.wrap = false
 
--- for `akinsho/bufferline.nvim` usage
+-- [`gianllopez/neovim.conf`]: confirm before quit on unsaved files
+vim.opt.confirm = true
+
+-- [`akinsho/bufferline.nvim`]: requirement for plugin usage
 vim.opt.termguicolors = true
