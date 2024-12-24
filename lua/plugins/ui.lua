@@ -32,8 +32,20 @@ return {
 			"rcarriga/nvim-notify",
 		},
 		opts = {
-			presets = {
-				inc_rename = true,
+			presets = { inc_rename = true },
+			routes = {
+				{
+					filter = {
+						any = {
+							-- [`gianllopez/neovim.conf`]
+							{ event = "msg_show", find = "written" },
+							-- [`nvim-tree/nvim-tree.lua`]
+							{ event = "notify", find = "was properly removed" },
+							{ event = "notify", find = "was properly created" },
+						},
+					},
+					opts = { skip = true },
+				},
 			},
 		},
 	},

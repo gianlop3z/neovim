@@ -8,8 +8,8 @@ return {
 		opts = {
 			filters = {
 				dotfiles = true,
-				custom = { "^%.venv%..*" },
-				exclude = { "%.env$", "%.env%..*" },
+				custom = { "^%.venv%..*", "node_modules" },
+				exclude = { "%.env$", "%.env%..*", "%.prettierrc%.yml", "%.gitignore" },
 			},
 		},
 	},
