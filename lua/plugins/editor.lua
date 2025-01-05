@@ -9,7 +9,7 @@ return {
 			filters = {
 				dotfiles = true,
 				custom = { "^%.venv%..*", "node_modules" },
-				exclude = { "%.env$", "%.env%..*", "%.prettierrc%.yml", "%.gitignore" },
+				exclude = { "%.env$", "%.env%..*", "%.prettierrc%.yml", "%.gitignore", "%.dockerignore" },
 			},
 		},
 	},

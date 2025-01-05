@@ -27,6 +27,7 @@ return {
 				javascript = { "prettier" },
 				typescript = { "prettier" },
 				typescriptreact = { "prettier" },
+				css = { "prettier" },
 			},
 		},
 	},

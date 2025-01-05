@@ -42,11 +42,20 @@ return {
 							-- [`nvim-tree/nvim-tree.lua`]
 							{ event = "notify", find = "was properly removed" },
 							{ event = "notify", find = "was properly created" },
+							-- [`neovim/nvim-lspconfig`]
+							{ event = "notify", find = "No information available" },
 						},
 					},
 					opts = { skip = true },
 				},
 			},
+		},
+	},
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		main = "ibl",
+		opts = {
+			scope = { enabled = false },
 		},
 	},
 }

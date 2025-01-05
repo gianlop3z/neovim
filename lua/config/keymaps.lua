@@ -3,15 +3,14 @@ local map = vim.keymap.set
 -- [`gianllopez/neovim.conf`]: `discipline` setup
 require("custom.discipline").ninja()
 
--- [`gianllopez/neovim.conf`]: disable arrow navigation
+-- [`gianllopez/neovim.conf`]: disable left arrow navigation
 map({ "n", "i", "v" }, "<Left>", "<Nop>")
+-- [`gianllopez/neovim.conf`]: disable down arrow navigation
 map({ "n", "i", "v" }, "<Down>", "<Nop>")
+-- [`gianllopez/neovim.conf`]: disable right arrow navigation
 map({ "n", "i", "v" }, "<Right>", "<Nop>")
+-- [`gianllopez/neovim.conf`]: disable up arrow navigation
 map({ "n", "i", "v" }, "<Up>", "<Nop>")
-
--- [`lazy.nvim`]: open `Lazy` tool
-map("n", "<leader>l", "<Cmd>Lazy<CR>", { noremap = true, nowait = true })
-
 -- [`gianllopez/neovim.conf`]: enter on interactive mode
 map("n", ";", ":", { noremap = true, nowait = true })
 -- [`gianllopez/neovim.conf`]: replace in word
@@ -76,13 +75,16 @@ map("n", "<leader>fr", "<Cmd>FzfLua resume<CR>", { noremap = true, nowait = true
 -- [`folke/flash.nvim`]: Flash in current buffer
 map("n", "s", function()
 	require("flash").jump()
-end, { noremap = true })
+end, { noremap = true, nowait = true })
 -- [`folke/flash.nvim`]: Flash in current buffer using treesitter
 map("n", "S", function()
 	require("flash").treesitter()
-end, { noremap = true })
+end, { noremap = true, nowait = true })
 
 -- -- [`smjonas/inc-rename.nvim`]: execute the renaming feature
 map("n", "<leader>cr", function()
 	return ":IncRename " .. vim.fn.expand("<cword>")
 end, { noremap = true, expr = true })
+
+-- [`lazy.nvim`]: open `Lazy` tool
+map("n", "<leader>l", "<Cmd>Lazy<CR>", { noremap = true, nowait = true })
