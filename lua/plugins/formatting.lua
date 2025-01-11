@@ -28,6 +28,7 @@ return {
 				typescript = { "prettier" },
 				typescriptreact = { "prettier" },
 				css = { "prettier" },
+				svg = { "prettier" },
 			},
 		},
 	},

@@ -2,19 +2,31 @@ return {
 	{
 		"nvim-tree/nvim-tree.lua",
 		version = "*",
-		dependencies = {
-			{ "nvim-tree/nvim-web-devicons" },
-		},
 		opts = {
 			filters = {
 				dotfiles = true,
 				custom = { "^%.venv%..*", "node_modules" },
 				exclude = { "%.env$", "%.env%..*", "%.prettierrc%.yml", "%.gitignore", "%.dockerignore" },
 			},
+			sort = { sorter = "filetype" },
+			view = { adaptive_size = true },
+			renderer = {
+				indent_markers = { enable = true },
+				icons = { git_placement = "after" },
+			},
+			ui = { confirm = { default_yes = true } },
+		},
+		dependencies = {
+			{ "nvim-tree/nvim-web-devicons" },
 		},
 	},
 	{
 		"ibhagwan/fzf-lua",
+		opts = {
+			winopts = {
+				title_pos = "center",
+			},
+		},
 		dependencies = {
 			{ "nvim-tree/nvim-web-devicons" },
 		},
@@ -35,6 +47,17 @@ return {
 		},
 	},
 	{
+		"folke/trouble.nvim",
+		cmd = "Trouble",
+		opts = {
+			win = {
+				wo = {
+					wrap = true,
+				},
+			},
+		},
+	},
+	{
 		"folke/flash.nvim",
 		event = "VeryLazy",
 		opts = {
@@ -45,6 +68,10 @@ return {
 	},
 	{
 		"smjonas/inc-rename.nvim",
+		opts = {},
+	},
+	{
+		"MagicDuck/grug-far.nvim",
 		opts = {},
 	},
 	{
